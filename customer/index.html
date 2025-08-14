@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savory Bites | Fine Dining Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <i class="fas fa-utensils text-amber-500 text-2xl mr-2"></i>
+              <span class="text-xl font-bold text-gray-800">Savory Bites</span>
+            </div>
+          </div>
+          <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-gray-700 hover:text-amber-500 px-3 py-2 text-sm font-medium"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-gray-700 hover:text-amber-500 px-3 py-2 text-sm font-medium"
+              >About</a
+            >
+            <a
+              href="#menu"
+              class="nav-link text-gray-700 hover:text-amber-500 px-3 py-2 text-sm font-medium"
+              >Services</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-700 hover:text-amber-500 px-3 py-2 text-sm font-medium"
+              >Contact Us</a
+            >
+            <a
+              href="#login"
+              class="nav-link text-gray-700 hover:text-amber-500 px-3 py-2 text-sm font-medium"
+              >Login</a
+            >
+            <a
+              href="#register"
+              class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Registration</a
+            >
+          </div>
+          <div class="-mr-2 flex items-center md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500"
+            >
+              <span class="sr-only">Open main menu</span>
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-500 hover:bg-gray-50"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-500 hover:bg-gray-50"
+            >About</a
+          >
+          <a
+            href="#menu"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-500 hover:bg-gray-50"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-500 hover:bg-gray-50"
+            >Contact Us</a
+          >
+          <a
+            href="#login"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-500 hover:bg-gray-50"
+            >Login</a
+          >
+          <a
+            href="#register"
+            class="block px-3 py-2 text-base font-medium text-white bg-amber-500 rounded-md hover:bg-amber-600"
+            >Registration</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-24 pb-32 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center fade-in">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Experience Culinary Excellence
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Where every bite tells a story of passion, tradition, and innovation
+          </p>
+          <div class="space-x-4">
+            <a
+              href="#menu"
+              class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 pulse-hover"
+            >
+              View Our Menu
+            </a>
+            <a
+              href="#contact"
+              class="inline-block border-2 border-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300"
+            >
+              Make a Reservation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:flex items-center">
+          <div class="lg:w-1/2 mb-10 lg:mb-0 fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+              alt="Our Chef"
+              class="rounded-lg shadow-xl w-full h-auto"
+            />
+          </div>
+          <div class="lg:w-1/2 lg:pl-12 fade-in delay-1">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+            <p class="text-gray-600 mb-4">
+              Founded in 2010, Savory Bites began as a small family-owned
+              restaurant with a passion for creating memorable dining
+              experiences. Our journey started with a simple philosophy: to
+              serve food that warms the heart and delights the senses.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Today, we've grown into a culinary destination known for our
+              innovative dishes that blend traditional techniques with modern
+              flavors. Our award-winning chef brings over 20 years of
+              international experience to every plate.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center">
+                <i class="fas fa-award text-amber-500 text-2xl mr-3"></i>
+                <span class="font-medium">Michelin Star 2022</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-leaf text-amber-500 text-2xl mr-3"></i>
+                <span class="font-medium">Locally Sourced</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-heart text-amber-500 text-2xl mr-3"></i>
+                <span class="font-medium">Family Recipes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu/Services Section -->
+    <section id="menu" class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Our Culinary Offerings
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore our carefully crafted menu featuring seasonal ingredients
+            and innovative flavor combinations
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Menu Item 1 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md menu-item fade-in delay-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1546069901-ba9599a8e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+              alt="Signature Dish"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-800">Truffle Risotto</h3>
+                <span
+                  class="bg-amber-100 text-amber-800 text-sm font-semibold px-2.5 py-0.5 rounded"
+                  >$28</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Creamy Arborio rice with black truffle, wild mushrooms, and
+                Parmigiano-Reggiano
+              </p>
+              <button
+                class="text-amber-500 hover:text-amber-600 font-medium flex items-center"
+              >
+                Add to order <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Menu Item 2 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md menu-item fade-in delay-2"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1081&q=80"
+              alt="Signature Dish"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-800">Filet Mignon</h3>
+                <span
+                  class="bg-amber-100 text-amber-800 text-sm font-semibold px-2.5 py-0.5 rounded"
+                  >$42</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                8oz grass-fed beef with truffle mashed potatoes and seasonal
+                vegetables
+              </p>
+              <button
+                class="text-amber-500 hover:text-amber-600 font-medium flex items-center"
+              >
+                Add to order <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Menu Item 3 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md menu-item fade-in delay-3"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80"
+              alt="Signature Dish"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-800">Seafood Platter</h3>
+                <span
+                  class="bg-amber-100 text-amber-800 text-sm font-semibold px-2.5 py-0.5 rounded"
+                  >$36</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Fresh lobster, scallops, and shrimp with lemon butter sauce and
+                herb rice
+              </p>
+              <button
+                class="text-amber-500 hover:text-amber-600 font-medium flex items-center"
+              >
+                Add to order <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 fade-in delay-4">
+          <a
+            href="#"
+            class="inline-block border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+          >
+            View Full Menu
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-amber-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            What Our Guests Say
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Don't just take our word for it - hear from our valued customers
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-sm fade-in delay-1">
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-quote-left text-amber-300 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10">
+                    <img
+                      class="h-10 w-10 rounded-full"
+                      src="https://randomuser.me/api/portraits/women/32.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      Sarah Johnson
+                    </p>
+                    <div class="flex space-x-1 text-amber-400">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "The truffle risotto was absolutely divine! The ambiance was
+              perfect for our anniversary dinner. We'll definitely be back!"
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-sm fade-in delay-2">
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-quote-left text-amber-300 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10">
+                    <img
+                      class="h-10 w-10 rounded-full"
+                      src="https://randomuser.me/api/portraits/men/45.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      Michael Chen
+                    </p>
+                    <div class="flex space-x-1 text-amber-400">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "As a food critic, I'm rarely impressed, but Savory Bites exceeded
+              all expectations. The wine pairing was exceptional."
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-sm fade-in delay-3">
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-quote-left text-amber-300 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10">
+                    <img
+                      class="h-10 w-10 rounded-full"
+                      src="https://randomuser.me/api/portraits/women/68.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      Emily Rodriguez
+                    </p>
+                    <div class="flex space-x-1 text-amber-400">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "The service was impeccable and the seafood platter was the
+              freshest I've had in the city. Worth every penny!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:flex">
+          <div class="lg:w-1/2 mb-10 lg:mb-0 fade-in">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Us</h2>
+            <p class="text-gray-600 mb-6">
+              Have questions or want to make a reservation? Reach out to us
+              through any of these channels.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-map-marker-alt text-amber-500 mt-1"></i>
+                </div>
+                <div class="ml-3">
+                  <h3 class="text-sm font-medium text-gray-900">Address</h3>
+                  <p class="text-sm text-gray-500">
+                    123 Gourmet Avenue, Culinary District, NY 10001
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-phone-alt text-amber-500 mt-1"></i>
+                </div>
+                <div class="ml-3">
+                  <h3 class="text-sm font-medium text-gray-900">Phone</h3>
+                  <p class="text-sm text-gray-500">(212) 555-1234</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-envelope text-amber-500 mt-1"></i>
+                </div>
+                <div class="ml-3">
+                  <h3 class="text-sm font-medium text-gray-900">Email</h3>
+                  <p class="text-sm text-gray-500">
+                    reservations@savorybites.com
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-clock text-amber-500 mt-1"></i>
+                </div>
+                <div class="ml-3">
+                  <h3 class="text-sm font-medium text-gray-900">Hours</h3>
+                  <p class="text-sm text-gray-500">
+                    Monday - Thursday: 11am - 10pm<br />
+                    Friday - Saturday: 11am - 11pm<br />
+                    Sunday: 10am - 9pm
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="text-sm font-medium text-gray-900 mb-3">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-amber-500">
+                  <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-500">
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-500">
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-500">
+                  <i class="fab fa-yelp text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/2 lg:pl-12 fade-in delay-1">
+            <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold text-gray-800 mb-6">
+                Make a Reservation
+              </h3>
+              <form>
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="phone"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Phone</label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="guests"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Number of Guests</label
+                    >
+                    <select
+                      id="guests"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                    >
+                      <option>1 person</option>
+                      <option>2 people</option>
+                      <option>3 people</option>
+                      <option>4 people</option>
+                      <option>5+ people</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="date"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Date</label
+                    >
+                    <input
+                      type="date"
+                      id="date"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="time"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Time</label
+                    >
+                    <select
+                      id="time"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                    >
+                      <option>5:00 PM</option>
+                      <option>5:30 PM</option>
+                      <option>6:00 PM</option>
+                      <option>6:30 PM</option>
+                      <option>7:00 PM</option>
+                      <option>7:30 PM</option>
+                      <option>8:00 PM</option>
+                      <option>8:30 PM</option>
+                      <option>9:00 PM</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <label
+                    for="special-requests"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Special Requests</label
+                  >
+                  <textarea
+                    id="special-requests"
+                    rows="3"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                  ></textarea>
+                </div>
+                <div class="mt-8">
+                  <button
+                    type="submit"
+                    class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 rounded-md transition duration-300"
+                  >
+                    Book Table
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+      <div
+        class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+      >
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+          <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+        <span
+          class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          aria-hidden="true"
+          >&#8203;</span
+        >
+        <div
+          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        >
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-2xl leading-6 font-bold text-gray-900">
+                    Login to Your Account
+                  </h3>
+                  <button
+                    id="close-login"
+                    class="text-gray-400 hover:text-gray-500"
+                  >
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="mt-2">
+                  <form>
+                    <div class="mb-4">
+                      <label
+                        for="login-email"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        id="login-email"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                      />
+                    </div>
+                    <div class="mb-6">
+                      <label
+                        for="login-password"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        id="login-password"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                      />
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                      <div class="flex items-center">
+                        <input
+                          id="remember-me"
+                          name="remember-me"
+                          type="checkbox"
+                          class="h-4 w-4 text-amber-500 focus:ring-amber-500 border-gray-300 rounded"
+                        />
+                        <label
+                          for="remember-me"
+                          class="ml-2 block text-sm text-gray-700"
+                          >Remember me</label
+                        >
+                      </div>
+                      <div class="text-sm">
+                        <a
+                          href="#"
+                          class="font-medium text-amber-500 hover:text-amber-600"
+                          >Forgot password?</a
+                        >
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-md transition duration-300"
+                    >
+                      Sign In
+                    </button>
+                  </form>
+                  <div class="mt-4 text-center">
+                    <p class="text-sm text-gray-600">
+                      Don't have an account?
+                      <a
+                        href="#register"
+                        class="font-medium text-amber-500 hover:text-amber-600"
+                        >Register here</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="register-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+      <div
+        class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+      >
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+          <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+        <span
+          class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          aria-hidden="true"
+          >&#8203;</span
+        >
+        <div
+          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        >
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-2xl leading-6 font-bold text-gray-900">
+                    Create Your Account
+                  </h3>
+                  <button
+                    id="close-register"
+                    class="text-gray-400 hover:text-gray-500"
+                  >
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="mt-2">
+                  <form>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <label
+                          for="first-name"
+                          class="block text-sm font-medium text-gray-700 mb-1"
+                          >First Name</label
+                        >
+                        <input
+                          type="text"
+                          id="first-name"
+                          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          for="last-name"
+                          class="block text-sm font-medium text-gray-700 mb-1"
+                          >Last Name</label
+                        >
+                        <input
+                          type="text"
+                          id="last-name"
+                          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-4">
+                      <label
+                        for="register-email"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        id="register-email"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <label
+                        for="register-password"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        id="register-password"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                      />
+                    </div>
+                    <div class="mb-6">
+                      <label
+                        for="confirm-password"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Confirm Password</label
+                      >
+                      <input
+                        type="password"
+                        id="confirm-password"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                      />
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="terms"
+                        name="terms"
+                        type="checkbox"
+                        class="h-4 w-4 text-amber-500 focus:ring-amber-500 border-gray-300 rounded"
+                      />
+                      <label
+                        for="terms"
+                        class="ml-2 block text-sm text-gray-700"
+                      >
+                        I agree to the
+                        <a href="#" class="text-amber-500 hover:text-amber-600"
+                          >Terms of Service</a
+                        >
+                        and
+                        <a href="#" class="text-amber-500 hover:text-amber-600"
+                          >Privacy Policy</a
+                        >
+                      </label>
+                    </div>
+                    <button
+                      type="submit"
+                      class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-md transition duration-300"
+                    >
+                      Create Account
+                    </button>
+                  </form>
+                  <div class="mt-4 text-center">
+                    <p class="text-sm text-gray-600">
+                      Already have an account?
+                      <a
+                        href="#login"
+                        class="font-medium text-amber-500 hover:text-amber-600"
+                        >Login here</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Savory Bites</h3>
+            <p class="text-gray-400">
+              Where culinary artistry meets warm hospitality for an
+              unforgettable dining experience.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-amber-500 transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-amber-500 transition duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#menu"
+                  class="text-gray-400 hover:text-amber-500 transition duration-300"
+                  >Our Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-amber-500 transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Opening Hours</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex justify-between">
+                <span>Mon - Thu:</span> <span>11am - 10pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Fri - Sat:</span> <span>11am - 11pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Sunday:</span> <span>10am - 9pm</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to receive updates and special offers
+            </p>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900"
+              />
+              <button
+                type="submit"
+                class="bg-amber-500 hover:bg-amber-600 px-4 py-2 rounded-r-md transition duration-300"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2023 Savory Bites. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-amber-500 transition duration-300"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-amber-500 transition duration-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-amber-500 transition duration-300"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-amber-500 transition duration-300"
+            >
+              <i class="fab fa-yelp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
