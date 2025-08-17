@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culinary Offerings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 50;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .modal-content {
+        background-color: #fff;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 500px;
+        position: relative;
+      }
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #555;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Menu/Services Section -->
+    <section id="menu" class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Our Culinary Offerings
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore our carefully crafted menu featuring seasonal ingredients
+            and innovative flavor combinations
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Menu Item 1 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md menu-item fade-in delay-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1546069901-ba9599a8e63c?auto=format&fit=crop&w=880&q=80"
+              alt="Signature Dish"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-800">Truffle Risotto</h3>
+                <span
+                  class="bg-amber-100 text-amber-800 text-sm font-semibold px-2.5 py-0.5 rounded"
+                  >$28</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Creamy Arborio rice with black truffle, wild mushrooms, and
+                Parmigiano-Reggiano
+              </p>
+              <button
+                onclick="addToCart('Truffle Risotto', 28)"
+                class="text-amber-500 hover:text-amber-600 font-medium flex items-center"
+              >
+                Add to order <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Menu Item 2 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md menu-item fade-in delay-2"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1081&q=80"
+              alt="Signature Dish"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-800">Filet Mignon</h3>
+                <span
+                  class="bg-amber-100 text-amber-800 text-sm font-semibold px-2.5 py-0.5 rounded"
+                  >$42</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                8oz grass-fed beef with truffle mashed potatoes and seasonal
+                vegetables
+              </p>
+              <button
+                onclick="addToCart('Filet Mignon', 42)"
+                class="text-amber-500 hover:text-amber-600 font-medium flex items-center"
+              >
+                Add to order <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Menu Item 3 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md menu-item fade-in delay-3"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1371&q=80"
+              alt="Signature Dish"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-800">Seafood Platter</h3>
+                <span
+                  class="bg-amber-100 text-amber-800 text-sm font-semibold px-2.5 py-0.5 rounded"
+                  >$36</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Fresh lobster, scallops, and shrimp with lemon butter sauce and
+                herb rice
+              </p>
+              <button
+                onclick="addToCart('Seafood Platter', 36)"
+                class="text-amber-500 hover:text-amber-600 font-medium flex items-center"
+              >
+                Add to order <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div
+      id="cartModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+        <button
+          onclick="toggleCart()"
+          class="absolute top-3 right-4 text-gray-600 text-xl"
+        >
+          &times;
+        </button>
+        <h2 class="text-xl font-bold mb-4">Your Order</h2>
+        <ul id="cartItems" class="mb-4 space-y-2"></ul>
+        <p class="font-semibold">Total: $<span id="cartTotal">0</span></p>
+        <div class="mt-4 flex justify-between">
+          <button
+            onclick="clearCart()"
+            class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
+          >
+            Clear
+          </button>
+          <button
+            onclick="confirmOrder()"
+            class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+    <button
+      onclick="toggleCart()"
+      class="fixed bottom-6 right-6 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full shadow-lg"
+    >
+      🛒 View Cart
+    </button>
+    <script>
+      let cart = [];
+
+      function addToCart(name, price) {
+        cart.push({ name, price });
+        updateCart();
+      }
+
+      function updateCart() {
+        const cartItems = document.getElementById("cartItems");
+        const cartTotal = document.getElementById("cartTotal");
+        cartItems.innerHTML = "";
+        let total = 0;
+        cart.forEach((item, index) => {
+          total += item.price;
+          cartItems.innerHTML += `
+        <li class="flex justify-between items-center border-b pb-1">
+          <span>${item.name} - $${item.price}</span>
+          <button onclick="removeFromCart(${index})" class="text-red-500">Remove</button>
+        </li>
+      `;
+        });
+        cartTotal.textContent = total.toFixed(2);
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+      }
+
+      function clearCart() {
+        cart = [];
+        updateCart();
+      }
+
+      function toggleCart() {
+        document.getElementById("cartModal").classList.toggle("hidden");
+      }
+
+      function confirmOrder() {
+        if (cart.length === 0) {
+          alert("Your cart is empty!");
+          return;
+        }
+        alert("Order confirmed! Thank you for your purchase.");
+        clearCart();
+        toggleCart();
+      }
+    </script>
+  </body>
+</html>
